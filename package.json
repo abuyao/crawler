@@ -1,0 +1,24 @@
+{
+  "name": "test-crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abuyao/crawler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abuyao/crawler/issues"
+  },
+  "homepage": "https://github.com/abuyao/crawler#readme",
+  "dependencies": {
+    "crawler": "^1.1.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "selenium-webdriver": "^3.6.0"
+  }
+}
