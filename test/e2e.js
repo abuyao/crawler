@@ -76,7 +76,7 @@ class TAOBAOCRAWLER {
     }
     initBuilder(){
         this.driver = new webdriver.Builder()
-        .forBrowser('firefox')//firefox //phantomjs
+        .forBrowser('phantomjs')//firefox //phantomjs
         .build();
     }
     quit(){
