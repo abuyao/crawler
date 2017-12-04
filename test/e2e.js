@@ -1,5 +1,6 @@
 const webdriver = require('selenium-webdriver'),
     By = webdriver.By,
+    Builder = webdriver.Builder,
     Key = webdriver.Key,
     until = webdriver.until;
 
@@ -72,10 +73,10 @@ class TAOBAOCRAWLER {
         this.driver.sleep(time);
     }
     initURL(){
-        this.driver.get('https://www.taobao.com/');
+        this.driver.get(this.url);
     }
     initBuilder(){
-        this.driver = new webdriver.Builder()
+        this.driver = new Builder()
         .forBrowser('phantomjs')//firefox //phantomjs
         .build();
     }
@@ -85,7 +86,7 @@ class TAOBAOCRAWLER {
 }
 const crawler = new TAOBAOCRAWLER('https://www.taobao.com/');
 crawler.serach("钢");
-crawler.sleep(4000);
+crawler.sleep(2000);
 crawler.getHrefText().then((list)=>{
     list.forEach(function(item){
         item.then(result=>{
